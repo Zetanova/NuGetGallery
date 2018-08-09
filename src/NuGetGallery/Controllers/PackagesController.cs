@@ -1622,7 +1622,8 @@ namespace NuGetGallery
                     var packagePolicyResult = await _securityPolicyService.EvaluatePackagePoliciesAsync(
                                     SecurityPolicyAction.PackagePush,
                                     HttpContext,
-                                    package);
+                                    package,
+                                    owner);
 
                     if (!packagePolicyResult.Success)
                     {
